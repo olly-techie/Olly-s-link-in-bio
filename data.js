@@ -67,7 +67,7 @@ const links = [
   {
     id: 'ollyverse',
     title: 'Ollyverse Tech',
-    description: 'Case studies & featured work',
+    description: "Official website for Ollyverse",
     url: 'https://ollyverse.pxxl.click',
     icon: 'ollyverse',
     primary: true
