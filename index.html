@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Connect with Dëv. Ølly - Developer, designer, and builder of digital products.">
+  <meta name="author" content="Dëv. Ølly">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="< Ï äm Dëv. Ølly /> - Link Bio">
+  <meta property="og:description" content="Building elegant solutions to complex problems. Engineer, founder, open source contributor.">
+  <meta property="og:image" content="me.webp">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="< Ï äm Dëv. Ølly /> - Link Bio">
+  <meta name="twitter:description" content="Building elegant solutions to complex problems.">
+  <meta name="twitter:image" content="me.webp">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="me.webp">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <title>< Ï äm Dëv. Ølly /> - Links</title>
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero__avatar" role="img" aria-label="Profile avatar">
+        <img src="me.webp" alt="Dëv. Ølly logo" height="100px">
+      </div>
+      <h1 class="hero__name">< Ï äm Dëv. Ølly /></h1>
+      <p class="hero__tagline">
+        Building <code>elegant solutions</code> to complex problems. Engineer, founder, open source contributor.
+      </p>
+    </header>
+
+    <!-- Links Section -->
+    <main class="links">
+      <h2 class="visually-hidden">Quick Links</h2>
+      <!-- Links will be dynamically inserted here by script.js -->
+      <div id="links-container" role="list"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        © <span id="year"></span> Dëv. Ølly. All rights reserved.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  
+  <!-- Dynamic year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- 
+    FUTURE ENHANCEMENTS:
+    
+    1. Add Analytics Script:
+       Uncomment one of the following based on your analytics provider:
+       
+       Google Analytics:
+       <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'GA_MEASUREMENT_ID');
+       </script>
+       
+       Plausible (privacy-friendly):
+       <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
+       
+       Fathom Analytics:
+       <script src="https://cdn.usefathom.com/script.js" data-site="YOUR_SITE_ID" defer></script>
+    
+    2. Add Service Worker (PWA):
+       <script>
+         if ('serviceWorker' in navigator) {
+           navigator.serviceWorker.register('/sw.js');
+         }
+       </script>
+    
+    3. Add Real-time Updates:
+       <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+       <script>
+         const socket = io('wss://your-backend.com');
+         socket.on('links-updated', () => {
+           window.location.reload();
+         });
+       </script>
+    
+    4. Add A/B Testing:
+       <script>
+         // Simple A/B test variant assignment
+         const variant = Math.random() < 0.5 ? 'A' : 'B';
+         sessionStorage.setItem('abTestVariant', variant);
+       </script>
+  -->
+</body>
+</html>
