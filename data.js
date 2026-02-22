@@ -100,7 +100,7 @@ const links = [
   id: 'tiktok',
   title: 'TikTok',
   description: 'Follow my dev updates',
-  url: 'https://www.tiktok.com/@yourhandle',
+  url: 'https://www.tiktok.com/@devolly_coder',
   icon: 'tiktok',
   primary: true
  },
